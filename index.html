@@ -187,6 +187,15 @@
     
     <div class="post-body" itemprop="articleBody">
           
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"c911c867e065cf78af49","clientSecret":"9f55dcbc204b216b93f87f1bac3ad605f706c36f","repo":"hexo-plugin-gitalk","owner":"Cyc1ing1313","admin":["Cyc1ing1313"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
     </div>
 

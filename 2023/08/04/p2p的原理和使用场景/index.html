@@ -19,10 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="var gitalkConfig &#x3D; {&quot;clientID&quot;:&quot;c911c867e065cf78af49&quot;,&quot;clientSecret&quot;:&quot;9f55dcbc204b216b93f87f1bac3ad605f706c36f&quot;,&quot;repo&quot;:&quot;hexo-plugin-gitalk&quot;,&quot;owner&quot;:&quot;Cyc1ing1313&quot;,&quot;admin&quot;:[&quot;Cyc1ing1313&quot;],&quot;dist">
+<meta property="og:type" content="article">
 <meta property="og:title" content="p2p的原理和使用场景">
 <meta property="og:url" content="http://example.com/2023/08/04/p2p%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/index.html">
 <meta property="og:site_name" content="Cyc1ing1313&#39;s Blog">
+<meta property="og:description" content="var gitalkConfig &#x3D; {&quot;clientID&quot;:&quot;c911c867e065cf78af49&quot;,&quot;clientSecret&quot;:&quot;9f55dcbc204b216b93f87f1bac3ad605f706c36f&quot;,&quot;repo&quot;:&quot;hexo-plugin-gitalk&quot;,&quot;owner&quot;:&quot;Cyc1ing1313&quot;,&quot;admin&quot;:[&quot;Cyc1ing1313&quot;],&quot;dist">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-08-04T02:22:47.000Z">
 <meta property="article:modified_time" content="2023-08-04T02:23:17.200Z">
@@ -190,6 +192,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"clientID":"c911c867e065cf78af49","clientSecret":"9f55dcbc204b216b93f87f1bac3ad605f706c36f","repo":"hexo-plugin-gitalk","owner":"Cyc1ing1313","admin":["Cyc1ing1313"],"distractionFreeMode":false};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
     </div>
 
     
