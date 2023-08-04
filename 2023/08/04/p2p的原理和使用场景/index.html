@@ -19,13 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="P2P是什么​	peer to peer，即点对点技术，某台主机下载文件的同时，作为server也给其他主机提供下载服务。 P2P中涉及的概念 torrent 种子  123456789101112131415161718192021222324252627&amp;#123;  &quot;Announce&quot;: &quot;&quot;,  &quot;AnnounceList&quot;:">
+<meta property="og:type" content="article">
 <meta property="og:title" content="p2p的原理和使用场景">
 <meta property="og:url" content="http://example.com/2023/08/04/p2p%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/index.html">
 <meta property="og:site_name" content="Cyc1ing1313&#39;s Blog">
+<meta property="og:description" content="P2P是什么​	peer to peer，即点对点技术，某台主机下载文件的同时，作为server也给其他主机提供下载服务。 P2P中涉及的概念 torrent 种子  123456789101112131415161718192021222324252627&amp;#123;  &quot;Announce&quot;: &quot;&quot;,  &quot;AnnounceList&quot;:">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-08-04T02:22:47.000Z">
-<meta property="article:modified_time" content="2023-08-04T02:23:17.200Z">
+<meta property="article:modified_time" content="2023-08-04T08:39:47.413Z">
 <meta property="article:author" content="Cyc1ing1313">
 <meta property="article:tag" content="p2p">
 <meta name="twitter:card" content="summary">
@@ -124,7 +126,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -137,6 +139,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">P2P是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P%E4%B8%AD%E6%B6%89%E5%8F%8A%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">P2P中涉及的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">运行流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.</span> <span class="nav-text">使用场景</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -213,7 +216,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-08-04 10:22:47 / Modified: 10:23:17" itemprop="dateCreated datePublished" datetime="2023-08-04T10:22:47+08:00">2023-08-04</time>
+      <time title="Created: 2023-08-04 10:22:47 / Modified: 16:39:47" itemprop="dateCreated datePublished" datetime="2023-08-04T10:22:47+08:00">2023-08-04</time>
     </span>
 
   
@@ -225,7 +228,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h2 id="P2P是什么"><a href="#P2P是什么" class="headerlink" title="P2P是什么"></a>P2P是什么</h2><p>​	peer to peer，即点对点技术，某台主机下载文件的同时，作为server也给其他主机提供下载服务。</p>
+<h2 id="P2P中涉及的概念"><a href="#P2P中涉及的概念" class="headerlink" title="P2P中涉及的概念"></a>P2P中涉及的概念</h2><ol>
+<li>torrent 种子</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Announce&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;AnnounceList&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">[</span></span><br><span class="line">      <span class="string">&quot;udp://10.129.34.154:6881&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;Files&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;Length&quot;</span><span class="punctuation">:</span> <span class="number">17108364</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;Path&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;InfoHash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3419a8470722ef725cc3066de3f4faec54b6c9af&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;Name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;93df27aec0cd18d6d42173e601ffbbfd&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;NumFiles&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;NumPieces&quot;</span><span class="punctuation">:</span> <span class="number">17</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;PieceHashes&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;12adedfe8fd09402261ec58ee0ba3e0225c4d582&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;dbe85acc565eb21a311c272d8368196474c4e65f&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;770387174ec727d4032604b3a3cdda382a76049c&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;5edb9bf6b59392fa71c870a3d076fe5fee509f80&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;PieceLength&quot;</span><span class="punctuation">:</span> <span class="number">1048576</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;TotalLength&quot;</span><span class="punctuation">:</span> <span class="number">17108364</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;UrlList&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">null</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>tracker</li>
+<li>utp协议</li>
+<li></li>
+</ol>
+<h2 id="运行流程"><a href="#运行流程" class="headerlink" title="运行流程"></a>运行流程</h2><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>​	p2p一个比较典型的场景是镜像分发，在一个k8s集群中如果机器非常多，docker hub会存在带宽瓶颈，这时候可以利用p2p协议充分利用机房内的带宽，降低docker hub的带宽压力。</p>
+
     </div>
 
     
