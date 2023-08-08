@@ -31,7 +31,9 @@
 <li>Peer2，做种机发送给Peer1自己拥有的种子的Pieces列表，封装成Bitfield包。</li>
 <li>Peer1收到后，对比自己的Pieces列表，如果Peer2有自己没有的部分则发送Interested消息给对方。</li>
 <li>Peer2，做种机回复Unchoke消息，表示自己现在可以上传包给Peer1。</li>
-<li></li>
+<li>Peer1发送Request包，包含下载哪些Piece(Idx:0x3, Begin:0x0, Len:0x4000)。</li>
+<li>做种机和Peer2收到后，从自己的数据中找出Piece，按照chuck进行发送。</li>
+<li>此时如果Peer1收集到了一个Piece的全部Chuck，它会给所有Peers发送一个Have消息宣告自己拥有这个Piece，此时其他Peer也能从Peer1下载这个Piece。</li>
 </ol>
 <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>​	p2p一个比较典型的场景是镜像分发，在一个k8s集群中如果机器非常多，docker hub会存在带宽瓶颈，这时候可以利用p2p协议充分利用机房内的带宽，降低docker hub的带宽压力。</p>
 ]]></content>
